@@ -1,5 +1,7 @@
 .side-bar{
-    padding-top: 24px;
+    padding-top: 30px;
+    background-color: black;
+    margin-right: 50px;
 }
 
 .spotify-logo{
@@ -16,7 +18,11 @@
 }
 
 .side-bar-item {
-    padding: 0px 8px 0px 8px;
+    padding: 0px 6px 0px 6px;
+}
+
+.side-bar-item-top {
+    margin-top: 20px;
 }
 
 .side-bar-item-anchor {
@@ -28,4 +34,13 @@
     font-family: CircularSp;
     font-weight: 700;
     cursor: pointer;
+    
+}
+
+.side-bar-item-anchor:hover {
+    color:aliceblue;
+}
+
+.active {
+    color:aliceblue;
 }

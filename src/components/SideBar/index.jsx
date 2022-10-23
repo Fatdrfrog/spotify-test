@@ -12,7 +12,7 @@ const sideBarItems = [
   {
     id: "home",
     name: "Home",
-    icon: <HomeIcon />,
+    icon: <HomeIcon/>,
   },
   {
     id: "search",
@@ -46,7 +46,7 @@ export const SideBar = ({ textSubduedGrey }) => {
         }}
       >
         {sideBarItems.map((item) => (
-          <div key={item.id} className="side-bar-item">
+          <div key={item.id} className={item.id=='create' ? 'side-bar-item side-bar-item-top': 'side-bar-item'}>
             <div className="side-bar-item-anchor">
               <div className="side-bar-item-icon">{item.icon} </div>
               {item.name}
