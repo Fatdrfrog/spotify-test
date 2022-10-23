@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { MusicItems } from "./components/MusicItems";
+import { MusicSlider } from "./components/MusicSlider";
+import { Navigation } from "./components/Navigation";
+import { SideBar } from "./components/SideBar";
+
+import "./App.css";
+
+const secondaryGrey = "#393939";
+const lightGrey = "#282828";
+const textSubduedGrey = "#a7a7a7";
+const secondaryBlack = "#242424";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="top">
+        <SideBar textSubduedGrey={textSubduedGrey} />
+        <div className="content">
+          <Navigation
+            secondaryBlack={secondaryBlack}
+            secondaryGrey={secondaryGrey}
+            lightGrey={lightGrey}
+          />
+          <MusicItems secondaryGrey={secondaryGrey} />
+        </div>
+      </div>
+
+      <MusicSlider
+        secondaryBlack={secondaryBlack}
+        secondaryGrey={secondaryGrey}
+      />
     </div>
   );
 }
